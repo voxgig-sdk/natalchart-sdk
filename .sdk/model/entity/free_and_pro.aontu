@@ -1,0 +1,381 @@
+# Entity: free_and_pro
+
+main: kit: entity: free_and_pro: {
+
+  alias: field: {}
+
+  fields: {
+    birth: {
+      h: "Birth"
+      n: "birth"
+      r: true
+      t: "`$OBJECT`"
+    }
+    date: {
+      fo: "date"
+      h: "Date"
+      n: "date"
+      r: false
+      sh: "The day to compute, today (UTC) by default."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "free_and_pro"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "birth"
+          ]
+          co: {
+            id: "POST /v1/chart/angles"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/chart/angles"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "chart"
+            }
+            {
+              lit: "angles"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "birth"
+          ]
+          co: {
+            id: "POST /v1/chart/aspects"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/chart/aspects"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "chart"
+            }
+            {
+              lit: "aspects"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "birth"
+          ]
+          co: {
+            id: "POST /v1/chart/elements"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/chart/elements"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "chart"
+            }
+            {
+              lit: "elements"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "birth"
+          ]
+          co: {
+            id: "POST /v1/chart/fixed-stars"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/chart/fixed-stars"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "chart"
+            }
+            {
+              lit: "fixed-stars"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "birth"
+          ]
+          co: {
+            id: "POST /v1/chart/full"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/chart/full"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "chart"
+            }
+            {
+              lit: "full"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "birth"
+          ]
+          co: {
+            id: "POST /v1/chart/houses"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/chart/houses"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "chart"
+            }
+            {
+              lit: "houses"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "birth"
+          ]
+          co: {
+            id: "POST /v1/chart/planets"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/chart/planets"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "chart"
+            }
+            {
+              lit: "planets"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "birth"
+          ]
+          co: {
+            id: "POST /v1/chart/short"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/chart/short"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "chart"
+            }
+            {
+              lit: "short"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "birth"
+            "date"
+          ]
+          co: {
+            id: "POST /v1/horoscope/daily"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/horoscope/daily"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "horoscope"
+            }
+            {
+              lit: "daily"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/sky"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "date"
+                or: "date"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/sky"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "sky"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /v1/usage"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/v1/usage"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "usage"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

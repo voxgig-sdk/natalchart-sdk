@@ -1,0 +1,36 @@
+# BasicFreeAndProFlow
+
+main: kit: flow: BasicFreeAndProFlow:
+{
+  entity: "free_and_pro",
+  kind: "basic",
+  name: "BasicFreeAndProFlow",
+  step: [
+    {
+      i: {
+        ref: "free_and_pro_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "free_and_pro_ref01",
+        srcdatavar: "free_and_pro_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-free_and_pro_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicFreeAndProFlow"
+}

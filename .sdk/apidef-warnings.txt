@@ -1,0 +1,48 @@
+{
+  point: "warning"
+  note: "Points POST /v1/locations/rank, POST /v1/locations/score, POST /v1/solar-return, POST /v1/synastry, POST /v1/timing and POST /v1/transits on entity=api_pro op=create have the same selector (exist: none), so only POST /v1/locations/rank is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "api_pro"
+  op: "create"
+  points: [
+    "POST /v1/locations/rank"
+    "POST /v1/locations/score"
+    "POST /v1/solar-return"
+    "POST /v1/synastry"
+    "POST /v1/timing"
+    "POST /v1/transits"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points POST /v1/chart/angles, POST /v1/chart/aspects, POST /v1/chart/elements, POST /v1/chart/fixed-stars, POST /v1/chart/full, POST /v1/chart/houses, POST /v1/chart/planets, POST /v1/chart/short and POST /v1/horoscope/daily on entity=free_and_pro op=create have the same selector (exist: none), so only POST /v1/chart/angles is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "free_and_pro"
+  op: "create"
+  points: [
+    "POST /v1/chart/angles"
+    "POST /v1/chart/aspects"
+    "POST /v1/chart/elements"
+    "POST /v1/chart/fixed-stars"
+    "POST /v1/chart/full"
+    "POST /v1/chart/houses"
+    "POST /v1/chart/planets"
+    "POST /v1/chart/short"
+    "POST /v1/horoscope/daily"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /v1/sky and GET /v1/usage on entity=free_and_pro op=load have the same selector (exist: none), so only GET /v1/sky is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "free_and_pro"
+  op: "load"
+  points: [
+    "GET /v1/sky"
+    "GET /v1/usage"
+  ]
+
+}

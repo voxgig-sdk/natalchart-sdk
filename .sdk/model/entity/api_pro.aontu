@@ -1,0 +1,290 @@
+# Entity: api_pro
+
+main: kit: entity: api_pro: {
+
+  alias: field: {}
+
+  fields: {
+    activity: {
+      h: "Activity"
+      n: "activity"
+      r: false
+      t: "`$STRING`"
+    }
+    birth: {
+      h: "Birth"
+      n: "birth"
+      r: true
+      t: "`$OBJECT`"
+    }
+    focus: {
+      h: "Focus"
+      n: "focus"
+      r: false
+      t: "`$ARRAY`"
+    }
+    from: {
+      fo: "date"
+      h: "From"
+      n: "from"
+      r: false
+      t: "`$STRING`"
+    }
+    limit: {
+      h: "Limit"
+      n: "limit"
+      r: false
+      t: "`$INTEGER`"
+    }
+    location: {
+      h: "Location"
+      n: "location"
+      op: {
+        create: {
+          req: false
+          type: "`$OBJECT`"
+        }
+      }
+      r: true
+      t: "`$OBJECT`"
+    }
+    personA: {
+      h: "Person A"
+      n: "personA"
+      r: true
+      t: "`$OBJECT`"
+    }
+    personB: {
+      h: "Person B"
+      n: "personB"
+      r: true
+      t: "`$OBJECT`"
+    }
+    region: {
+      h: "Region"
+      n: "region"
+      r: false
+      t: "`$STRING`"
+    }
+    timezone: {
+      h: "Timezone"
+      n: "timezone"
+      r: false
+      sh: "IANA zone that sets where each day begins."
+      t: "`$STRING`"
+    }
+    to: {
+      fo: "date"
+      h: "To"
+      n: "to"
+      r: false
+      sh: "At most 62 days after from; 30 days by default."
+      t: "`$STRING`"
+    }
+    year: {
+      h: "Year"
+      n: "year"
+      r: true
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "api_pro"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "birth"
+            "focus"
+            "limit"
+            "region"
+          ]
+          co: {
+            id: "POST /v1/locations/rank"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/locations/rank"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "locations"
+            }
+            {
+              lit: "rank"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "birth"
+            "location"
+          ]
+          co: {
+            id: "POST /v1/locations/score"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/locations/score"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "locations"
+            }
+            {
+              lit: "score"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "birth"
+            "location"
+            "year"
+          ]
+          co: {
+            id: "POST /v1/solar-return"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/solar-return"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "solar-return"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "personA"
+            "personB"
+          ]
+          co: {
+            id: "POST /v1/synastry"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/synastry"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "synastry"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "activity"
+            "birth"
+            "from"
+            "timezone"
+            "to"
+          ]
+          co: {
+            id: "POST /v1/timing"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/timing"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "timing"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "birth"
+            "from"
+            "to"
+          ]
+          co: {
+            id: "POST /v1/transits"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/transits"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "transits"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

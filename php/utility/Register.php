@@ -1,0 +1,72 @@
+<?php
+declare(strict_types=1);
+
+// Natalchart SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+NatalchartUtility::setRegistrar(function (NatalchartUtility $u): void {
+    $u->clean = [NatalchartClean::class, 'call'];
+    $u->clean_add = [NatalchartClean::class, 'add'];
+    $u->clean_explain = [NatalchartDone::class, 'clean_explain'];
+    $u->done = [NatalchartDone::class, 'call'];
+    $u->make_error = [NatalchartMakeError::class, 'call'];
+    $u->feature_add = [NatalchartFeatureAdd::class, 'call'];
+    $u->feature_hook = [NatalchartFeatureHook::class, 'call'];
+    $u->feature_init = [NatalchartFeatureInit::class, 'call'];
+    $u->fetcher = [NatalchartFetcher::class, 'call'];
+    $u->make_fetch_def = [NatalchartMakeFetchDef::class, 'call'];
+    $u->make_context = [NatalchartMakeContext::class, 'call'];
+    $u->make_options = [NatalchartMakeOptions::class, 'call'];
+    $u->make_request = [NatalchartMakeRequest::class, 'call'];
+    $u->make_response = [NatalchartMakeResponse::class, 'call'];
+    $u->make_result = [NatalchartMakeResult::class, 'call'];
+    $u->make_point = [NatalchartMakePoint::class, 'call'];
+    $u->make_spec = [NatalchartMakeSpec::class, 'call'];
+    $u->make_url = [NatalchartMakeUrl::class, 'call'];
+    $u->param = [NatalchartParam::class, 'call'];
+    $u->prepare_auth = [NatalchartPrepareAuth::class, 'call'];
+    $u->prepare_body = [NatalchartPrepareBody::class, 'call'];
+    $u->prepare_headers = [NatalchartPrepareHeaders::class, 'call'];
+    $u->prepare_method = [NatalchartPrepareMethod::class, 'call'];
+    $u->prepare_params = [NatalchartPrepareParams::class, 'call'];
+    $u->prepare_path = [NatalchartPreparePath::class, 'call'];
+    $u->prepare_query = [NatalchartPrepareQuery::class, 'call'];
+    $u->graphql_body = [NatalchartGraphql::class, 'body'];
+    $u->graphql_errors = [NatalchartGraphql::class, 'errors'];
+    $u->result_basic = [NatalchartResultBasic::class, 'call'];
+    $u->result_body = [NatalchartResultBody::class, 'call'];
+    $u->result_headers = [NatalchartResultHeaders::class, 'call'];
+    $u->transform_request = [NatalchartTransformRequest::class, 'call'];
+    $u->transform_response = [NatalchartTransformResponse::class, 'call'];
+});

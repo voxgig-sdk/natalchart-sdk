@@ -1,0 +1,86 @@
+{
+  "existing": {
+    "free_and_pro": {
+      "FREE_AND_PRO00": {
+        "birth": {},
+        "date": "s15",
+        "id": "FREE_AND_PRO00"
+      },
+      "FREE_AND_PRO01": {
+        "birth": {},
+        "date": "s29",
+        "id": "FREE_AND_PRO01"
+      },
+      "FREE_AND_PRO02": {
+        "birth": {},
+        "date": "s3d",
+        "id": "FREE_AND_PRO02"
+      }
+    }
+  },
+  "new": {
+    "free_and_pro": {
+      "free_and_pro_ref01": {
+        "birth": {},
+        "date": "s51"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/chart/angles": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/chart/aspects": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/chart/elements": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/chart/fixed-stars": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/chart/full": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/chart/houses": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/chart/planets": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/chart/short": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/horoscope/daily": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/sky": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/usage": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "existing": {
+    "api_pro": {
+      "API_PRO00": {
+        "activity": "s78",
+        "birth": {},
+        "focus": [],
+        "from": "s7b",
+        "limit": 124,
+        "location": {},
+        "personA": {},
+        "personB": {},
+        "region": "s80",
+        "timezone": "s81",
+        "to": "s82",
+        "year": 131,
+        "id": "API_PRO00"
+      },
+      "API_PRO01": {
+        "activity": "sf0",
+        "birth": {},
+        "focus": [],
+        "from": "sf3",
+        "limit": 244,
+        "location": {},
+        "personA": {},
+        "personB": {},
+        "region": "sf8",
+        "timezone": "sf9",
+        "to": "sfa",
+        "year": 251,
+        "id": "API_PRO01"
+      },
+      "API_PRO02": {
+        "activity": "s168",
+        "birth": {},
+        "focus": [],
+        "from": "s16b",
+        "limit": 364,
+        "location": {},
+        "personA": {},
+        "personB": {},
+        "region": "s170",
+        "timezone": "s171",
+        "to": "s172",
+        "year": 371,
+        "id": "API_PRO02"
+      }
+    }
+  },
+  "new": {
+    "api_pro": {
+      "api_pro_ref01": {
+        "activity": "s1e0",
+        "birth": {},
+        "focus": [],
+        "from": "s1e3",
+        "limit": 484,
+        "location": {},
+        "personA": {},
+        "personB": {},
+        "region": "s1e8",
+        "timezone": "s1e9",
+        "to": "s1ea",
+        "year": 491
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/locations/rank": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/locations/score": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/solar-return": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/synastry": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/timing": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/transits": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        email: "contact@natalchart.ai"
+        name: "NatalChart.AI"
+        url: "https://www.natalchart.ai/developers"
+      }
+      description: "Swiss Ephemeris astrology calculations as JSON: natal charts, transits, synastry and solar returns. Tropical zodiac, Placidus houses, the five major aspects. No generated text and no AI calls. GET /v1/sky works without a key. Free: 10 requests a day. API Pro: 1000 requests a day for $6.99 a month. Request bodies are never stored."
+      security: {
+        in: "header"
+        name: "Authorization"
+        prefix: "Bearer"
+        scheme: "apiKey"
+        type: "http"
+      }
+      servers: [
+        {
+          url: "https://api.natalchart.ai"
+        }
+      ]
+      summary: "Swiss Ephemeris astrology calculations as JSON: natal charts, transits, synastry and solar returns."
+      termsOfService: "https://www.natalchart.ai/terms"
+      title: "NatalChart.AI API"
+      version: "1.0.0"
+      website: "https://natalchart.ai"
+    }
+  }
+}
+

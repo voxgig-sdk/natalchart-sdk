@@ -1,0 +1,17 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "At most 62 days after from; 30 days by default.",
+      "IANA zone that sets where each day begins.",
+      "Swiss Ephemeris astrology calculations as JSON: natal charts, transits, synastry and solar returns. Tropical zodiac, Placidus houses, the five major aspects. No generated text and no AI calls. GET /v1/sky works without a key. Free: 10 requests a day. API Pro: 1000 requests a day for $6.99 a month. Request bodies are never stored.",
+      "The calculation, as JSON",
+      "The day to compute, today (UTC) by default.",
+      "Your API key from https://www.natalchart.ai/developers/keys"
+    ]
+  }
+}
